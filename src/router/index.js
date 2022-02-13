@@ -6,7 +6,7 @@ import PageNotFound from '@/views/PageNotFound'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    {path: "/", name: 'Home', component: Home},
+    {path: "/home", name: 'Home', component: Home},
     {path: "/:id", name: 'page', component: Coin, props: true},
     {path: "/:catchAll(.*)*", name: 'PageNotFound', component: PageNotFound}
   ],
