@@ -1,33 +1,8 @@
-# ToDo App with Vue 3 Composition API
+Vue App
 
-> A simple ToDo application using Vue 3 Composition API.
+Demo []
 
-### Demo: [https://todo-app.burakgur.vercel.app/](https://todo-app.burakgur.vercel.app/)
+Development server
 
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Run npm run serve for a dev server. Navigate to http://localhost:8080/.
+The app will automatically reload if you change any of the source files.
