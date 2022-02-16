@@ -62,13 +62,15 @@ body {
     width: 25px;
     margin-right: 10px;
   }
-}
 
-.good {
-  color: green;
-}
+  &__priceUp {
+    color: green;
+    font-weight: bold;
+  }
 
-.danger {
-  color: red;
+  &__priceDown {
+    color: red;
+    font-weight: bold;
+  }
 }
 </style>

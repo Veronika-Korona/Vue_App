@@ -1,8 +1,11 @@
-Vue App
+# Vue App
 
-[DEMO LINK](https://veronika-korona.github.io/Vue_App/)
+- [DEMO LINK](https://veronika-korona.github.io/Vue_App/)
+
+Technology stack
+- Vue.js, axios, SCSS
 
 Development server
 
-Run npm run serve for a dev server. Navigate to http://localhost:8080/.
-The app will automatically reload if you change any of the source files.
+- Run npm run serve for a dev server. Navigate to http://localhost:8080/.
+- The app will automatically reload if you change any of the source files.

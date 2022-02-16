@@ -25,7 +25,12 @@
                 </router-link>
               </td>
               <td class="table__body__row-data">{{ coin.current_price }} &#8364;</td>
-              <td class="table__body__row-data" v-bind:class="coin__change">{{ coin.price_change_percentage_24h }} %</td>
+              <td
+                class="table__body__row-data"
+                v-bind:class="{'coin__priceUp': coin.price_change_percentage_24h > 0,'coin__priceDown': coin.price_change_percentage_24h < 0}"
+              >
+                {{ coin.price_change_percentage_24h }} %
+              </td>
               <td class="table__body__row-data">{{ coin.total_volume.toLocaleString('en-US') }} &#8364;</td>
             </tr>
           </tbody>
@@ -67,15 +72,9 @@ import axios from 'axios';
       })
     },
 
-    coin__change: function() {
-      return this.filteredCoins.map((coin) => {
-        if (coin.price_change_percentage_24h > 0) {
-          return 'good';
-       }
-
-        return 'danger';
-      });
+    getClass: function() {
+      return this.content > 0 ? 'good' : 'danger'
     }
-  }
+  },
 }
 </script>

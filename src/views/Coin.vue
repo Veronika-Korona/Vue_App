@@ -1,16 +1,19 @@
 <template>
-  <div class="home">
+  <div>
     <ul class="coin">
       <li class="coin__data"><strong>Name: </strong> {{ info.name }}</li>
-      <li class="coin__data">Symbol: {{ info.symbol.toUpperCase() }}</li>
-      <li class="coin__data">Logo:
+      <li class="coin__data"><strong>Symbol: </strong> {{ info.symbol.toUpperCase() }}</li>
+      <li class="coin__data"><strong>Logo </strong>:
       <img :src="info.image.thumb" alt="">
       </li>
-      <li class="coin__data">Url: 
+      <li class="coin__data"> <strong>Url: </strong>
         <a :href="info.links.homepage[0]" target="blank">{{ info.links.homepage[0] }}</a>
       </li>
-      <li class="coin__data">Genesis date: {{ info.genesis_date }}</li>
-      <li class="coin__data">Description: {{ info.description.en}}</li>
+      <li class="coin__data"> <strong>Genesis date: </strong>{{ info.genesis_date }}</li>
+      <li class="coin__data">
+        <strong>Description: </strong>
+        <br>
+        {{ info.description.en }}</li>
     </ul>
   </div>
 </template>
@@ -48,7 +51,7 @@ export default {
   computed: {
     coinId() {
       return this.coins.find(
-        (coin) => coin.id === this.id
+        (coin) => coin.id === this.route.props.id
       )
     }
   }
@@ -58,6 +61,7 @@ export default {
 <style lang="scss">
 .coin {
   font-size: 14px;
+
   &__data {
     margin-bottom: 20px;
   }
